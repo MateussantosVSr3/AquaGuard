@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* corpo e fonts*/
+body {
+    font-style: normal;
+    text-decoration: none;
+    color: #fff;
+}
+
+.jost-font {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Cabeçalho */
+
+.nav-fake {
+    width:100%;
+    height: 60px;
+    background-color: #6F58ED;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #6F58ED;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.sections a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.box-logo {
+    margin-left: 10px;
+    width: 50px;
+    height: 45px;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+}
+
+/* Section 0 */
+.content {
+    display: flex;
+    flex-direction: column; /* Ensure content flows vertically */
+}
+
+.align_center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background_initial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imagens/sea-4002951_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: calc(100vh - 60px);
+    color: white;
+}
+
+.center {
+    width: 180px;
+    height: 60px;
+}
+  
+.btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: background 1s ease-in-out;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.btn:hover {
+    background: #4F95DA;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* Seção genérica */
+section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Section 1 */
+section.section-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+}
+
+.box-1,
+.box-2 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.box-1>img {
+    width: 500px;
+}
+
+.icons_problem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Med */
+
+.background_mid1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imagens/ocean-6530523_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+/* Section 2*/
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Section 3*/
+
+.section-3 {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+/* Section 4 */
+.background-beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('imagens/jellyfish-698521_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+/* Section 5 */
+
+.section-5 {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+/* footer */
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+.copyright {
+    color:black;
+    background-color: #6F58ED;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+
