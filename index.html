@@ -25,12 +25,13 @@
                 <a class="jost-font" href="#publico" style="margin-right: 50px;">Público</a>
                 <a class="jost-font" href="#beneficios" style="margin-right: 50px;">Benefícios</a>
                 <a class="jost-font" href="#facilitacao" style="margin-right: 50px;">Facilitação</a>
+                <a class="jost-font" href="#contato" style="margin-right: 50px;">Contato</a>
             </div>
         </nav>
     </header>
     <div class="nav-fake" id="initial_page"></div>
     <!-- Seção de Conteúdo Inicial -->
-    <section class="content background_initial align_center" id="inicial">
+    <section class="content background_initial align_center bolhas" id="inicial">
         <h1 class="jost-font" style="font-weight: 600; font-size: 40px;">Acompanhe, em tempo real, a saúde dos nossos oceanos.</h1>
         <div class="center">
             <button class="btn">
@@ -38,33 +39,52 @@
                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>Veja Aqui</span>
+                <div>Veja Aqui</div>
             </button>
         </div>
     </section>
     <!-- Seção 1: Desafios -->
     <section class="section-1" id="problema">
         <div class="box-1">
-            <img style="margin-right: 100px;" src="imagens/beach-4914403_1280.jpg" alt="Praia com lixo">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagens/tartaruga.jpeg" alt="Imagem 1">
+                        <div class="legenda">
+                            <h3 class="jost-font" style="font-weight: 300;">O animal ficou preso ao plástico e, ao longo dos anos, seu corpo foi moldado por ele. Parecia usar um espartilho apertado, deformando-se enquanto crescia e tentava se adaptar ao plástico. Foto de: MISSOURI DEPARTMENT OF CONSERVATION.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagens/tubarao-lixo.png" alt="Imagem 2">
+                        <div class="legenda">
+                            <h3 class="jost-font" style="font-weight: 300;">No finalzinho de outubro, o fotógrafo polonês Jacek Dybowsky, registrou uma cena muito chocante: um plástico ficou preso no pescoço de um tubarão, cobrindo as fendas branquiais e causando uma asfixia lenta.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagens/Mare negra.jpeg" alt="Imagem 3">
+                        <div class="legenda">
+                            <h3 class="jost-font" style="font-weight: 300;">Uma explosão em uma plataforma de petróleo tirou a vida de 11 pessoas e desencadeou o maior vazamento de óleo da história dos Estados Unidos. Por três meses, cerca de cinco mil barris de óleo foram derramados diariamente, até que o vazamento fosse finalmente controlado.</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev button_carousel" onclick="prevSlide()">&#10094;</button>
+                <button class="next button_carousel" onclick="nextSlide()">&#10095;</button>
+            </div>
         </div>
         <div class="box-2">
-            <h1 class="jost-font" style="font-weight: 400; margin-bottom: 30px;">QUAIS DESAFIOS ENFRENTAMOS?</h1>
-            <div class="icons_problem" style="margin-bottom: 30px;">
-                <div class="icon">
-                    <img src="imagens/icons8-garrafa-50.png" alt="">
-                    <img style="transform: rotate(-90deg); width: 40px; margin-bottom: 10px;" src="imagens/icons8-flecha-50.png" alt="">
-                </div>
-                <div class="icon">
-                    <img src="imagens/icons8-lixo-50 (1).png" alt="">
-                    <img style="transform: rotate(-90deg); width: 40px; margin-bottom: 10px;" src="imagens/icons8-flecha-50.png" alt="">
-                </div>
-                <div class="icon">
-                    <img src="imagens/icons8-informação-50.png" alt="">
-                    <img style="transform: rotate(90deg); width: 40px; margin-top: 10px;" src="imagens/icons8-flecha-50.png" alt="">
-                </div>
-            </div>                
+            <h1 class="jost-font" style="font-weight: 400; margin-bottom: 30px;">QUAIS DESAFIOS ENFRENTAMOS?</h1>            
             <h2 class="jost-font" style="font-weight: 300;">O aumento de plástico e lixo nos oceanos é alarmante. Falta informação sobre a poluição marinha, dificultando ações de mitigação.</h2>
             <h2 class="jost-font" style="font-weight: 300; margin-top: 20px;">Há uma carência significativa em monitorar vastas áreas oceânicas. População e empresas precisam de dados acessíveis para promover sustentabilidade.</h2>
+            <div class="icons_problem" style="margin-top: 50px;">
+                <div>
+                    <img src="imagens/icons8-garrafa-50.png" alt="">
+                    <h3 class="jost-font" style="font-weight: 500;">Plástico Nos Mares</h3>
+                </div>
+                <div>
+                    <img src="imagens/icons8-lixo-50 (1).png" alt="">
+                    <h3 class="jost-font" style="font-weight: 500;">Lixo Nos Mares</h3>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Seção: Tecnologia -->
@@ -132,7 +152,7 @@
                             <img src="imagens/icons8-gráfico-combinado-48.png" alt="">
                             <h3 class="jost-font" style="font-weight: 500;">Dados</h3>
                         </div>
-                        <img src="imagens/icons8-direita-3-32.png" style="padding-top: 30px; alt="">
+                        <img src="imagens/icons8-direita-3-32.png" style="padding-top: 30px;">
                         <div>
                             <img src="imagens/icons8-cuidado-com-o-meio-ambiente-50.png" alt="">
                             <h3 class="jost-font" style="font-weight: 500;">Sustentabilidade</h3>
@@ -162,18 +182,41 @@
     </section>
     <!-- Seção 5: Benefícios Diários -->
     <section class="section-5" id="facilitacao">
-        <div class="column">
-            <div class="row">
-                <div class="box-2">
-                    <h1 class="jost-font" style="font-weight: 400; margin-bottom: 30px;">BENEFÍCIOS DIÁRIOS</h1>
-                    <h2 class="jost-font" style="font-weight: 300;">Facilita o acesso a dados de qualidade da água, ajudando na conscientização ambiental. Promove ações práticas para a manutenção da limpeza dos oceanos, beneficiando comunidades e empresas.</h2>
-                    <img src="imagens/icons8-planeta-terra-50.png" style="margin-top: 50px;" alt="">
-                    <h3 class="jost-font" style="font-weight: 500;">Por Um Mundo Melhor</h3>
-                </div>
-                <div class="box-1">
-                    <img style="margin-left: 100px;" src="imagens/boats-5813000_1280.jpg" alt="Barcos no oceano">
-                </div>
+        <div class="row">
+            <div class="box-2">
+                <h1 class="jost-font" style="font-weight: 400; margin-bottom: 30px;">BENEFÍCIOS DIÁRIOS</h1>
+                <h2 class="jost-font" style="font-weight: 300;">Facilita o acesso a dados de qualidade da água, ajudando na conscientização ambiental. Promove ações práticas para a manutenção da limpeza dos oceanos, beneficiando comunidades e empresas.</h2>
+                <img src="imagens/icons8-planeta-terra-50.png" style="margin-top: 50px;" alt="">
+                <h3 class="jost-font" style="font-weight: 500;">Por Um Mundo Melhor</h3>
             </div>
+            <div class="box-1">
+                <img style="margin-left: 100px;" src="imagens/boats-5813000_1280.jpg" alt="Barcos no oceano">
+            </div>
+        </div>
+    </section>
+    <!-- Seção 6: Contato -->
+    <section class="section-6" id="contato">
+        <div class="form-container">
+            <h2 class="jost-font">Contato</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name" class="jost-font">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="jost-font">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="jost-font">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" maxlength="250" required></textarea>
+                    <div class="char-count" id="charCount">0/250</div>
+                    <div class="error" id="messageError"></div>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
         </div>
     </section>
     <!-- Rodapé -->
@@ -214,5 +257,6 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
