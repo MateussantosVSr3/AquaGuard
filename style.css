@@ -35,24 +35,38 @@ body {
 /* Cabeçalho */
 
 .nav-fake {
-    width:100%;
+    width: 100%;
     height: 60px;
     background-color: #6F58ED;
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: #6F58ED;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.sections {
+    display: flex;
 }
 
 .sections a {
     text-decoration: none;
     color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sections a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 .box-logo {
@@ -66,10 +80,40 @@ nav {
     height: 100%;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sections {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #6F58ED;
+    }
+    .sections a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0 !important;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
 /* Section 0 */
 .content {
     display: flex;
-    flex-direction: column; /* Ensure content flows vertically */
+    flex-direction: column;
 }
 
 .align_center {
@@ -180,7 +224,6 @@ section.section-1 {
     max-width: 600px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 500px;
     height: 525px;
     margin-right: 100px;
@@ -436,4 +479,143 @@ section span::before{
         transform: translateY(-1200%);
         opacity: 0;
     }
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px) {
+    /* Inicial */
+
+    section {
+        display: block;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .background_initial {
+        background-position: right;
+    }
+
+    .background_initial>h1 {
+        font-size: 30px !important;
+    }
+
+    .center {
+        margin-top: 100px;
+    }
+
+    #inicial h1 {
+        padding: 20px;
+    }
+
+    /* Section 1*/
+
+    .section-1 {
+        flex-wrap: wrap-reverse !important;
+        padding: 0;
+    }
+
+    .carousel {
+        width: 100vw;
+    }
+
+    .button_carousel {
+        top: 100px;
+    }
+
+    .section-1 h2 {
+        padding: 20px !important;
+    }
+
+    /* Mid */
+
+    .background_mid1 h1 {
+        text-align: center;
+        font-size: 30px !important;
+    }
+
+    /* Section 2 */
+
+    .row {
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .box-2 h2 {
+        padding: 20px;
+    }
+
+    .box-1 img[src="imagens/buoy-4843825_1280.jpg"] {
+        width: 100vw;
+        margin: 0 !important;
+    }
+
+    .box-1 img[src="imagens/ocean-1867285_1280 (1).jpg"] {
+        width: 100vw;
+        margin: 0 !important;
+    }
+
+    /* Section 3 */
+
+    .row[id=metas] {
+        flex-wrap: wrap-reverse !important;
+    }
+
+    .icons_problem {
+        flex-wrap: wrap;
+    }
+
+    .icons_problem div {
+        margin: 10px;
+    }
+
+    .box-1 img[src="imagens/piran-8275931_1280.jpg"] {
+        width: 100vw;
+        margin: 0 !important;
+    }
+
+    /* Section 4 */
+
+    .background-beneficios {
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .icon div {
+        margin-right: 25px !important;
+        margin-left: 25px !important;
+    }
+
+    /* Section 5 */
+
+    .box-1 img[src="imagens/boats-5813000_1280.jpg"] {
+        width: 100vw;
+        margin: 0 !important;
+    }
+
+    /* Section 6 */
+
+    .section-6 {
+        background-image: none;
+    }
+
+    /* Footer*/
+
+    .social-media {
+        flex-wrap: wrap;
+        width: 100vw !important;
+        justify-content: center;
+    }
+
+    .social-media div {
+        font-size: 15px !important;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
 }

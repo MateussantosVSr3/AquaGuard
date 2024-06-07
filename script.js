@@ -88,14 +88,19 @@ messageInput.addEventListener('input', function() {
 /* Bolhas */
 
 function createBolhas(){
+    // Verifica se a largura da tela é maior que 768 pixels
+    if (window.innerWidth <= 768) {
+        return; // Se for menor ou igual a 768 pixels, a função é interrompida
+    }
+    
     const section = document.querySelector('section');
     const createElement = document.createElement('span');
     var size = Math.random() * 60;
-    var maxWidth = window.innerWidth - 80; // 80 é um valor arbitrário para evitar que as bolhas ultrapassem a borda direita
+    var maxWidth = window.innerWidth - 80;
 
     createElement.style.width = 20 + size + 'px';
     createElement.style.height = 20 + size + 'px';
-    createElement.style.left = Math.random() * maxWidth + 'px'; // Usando maxWidth em vez de innerWidth
+    createElement.style.left = Math.random() * maxWidth + 'px';
     section.appendChild(createElement);
 
     setTimeout(() => {
@@ -103,4 +108,22 @@ function createBolhas(){
     }, 4000);
 }
 
-setInterval(createBolhas, 50);
+// Executa createBolhas() apenas quando a largura da tela for maior que 768 pixels
+if (window.innerWidth > 768) {
+    setInterval(createBolhas, 50);
+}
+
+/* Menu */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navSections = document.getElementById('nav-sections');
+
+    hamburger.addEventListener('click', function() {
+        if (navSections.style.display === 'block') {
+            navSections.style.display = 'none';
+        } else {
+            navSections.style.display = 'block';
+        }
+    });
+});
